@@ -1,0 +1,9 @@
+Minna’s Request – Heart Disease Rate by Age Group and Sex
+
+SELECT
+  Age,
+  Sex,
+  ROUND(COUNTIF(HeartDisease = 1) / COUNT(*), 2) AS HeartDisease_Rate
+FROM `sql-portfolio-projects-456410.Heart_Disease_Dataset.Heart_Disease_Table`
+GROUP BY Age, Sex
+ORDER BY HeartDisease_Rate DESC
