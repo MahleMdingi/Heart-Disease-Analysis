@@ -1,0 +1,52 @@
+Healthcare Data Analyst & BI Portfolio Project
+Project Title:  Heart Disease Risk Analysis & Monitoring Dashboard for a Regional Clinic
+________________________________________
+1. Project Overview:
+You were engaged as a Healthcare Data Analyst and Business-Intelligence Consultant for a regional clinic that offers preventive care and chronic-disease monitoring. Leadership asked for a two-phase engagement:
+Phase	Purpose	Primary Stakeholders
+		
+1 – Data-Analytics Report	Detect high-risk patterns and deliver actionable insights.	Dr Elaine Raji – Chief Medical Officer
+2 – BI Dashboard	Provide an interactive visual tool that tracks risk factors in real time and guides operational decisions.	Keith Portone – Operations Lead
+Minna Rah – Public-Health Programs Lead
+Emma Santiago – Executive Sponsor
+
+Tools used
+•	Excel – initial cleaning & exploration
+•	BigQuery (SQL) – scalable querying & aggregations
+•	Tableau – interactive dashboards, KPIs & action cards
+________________________________________
+2 Dataset:
+Heart Failure Prediction Dataset – Fahim Mohamed (Kaggle)
+918 records · 12 clinical attributes
+Key Fields	Description
+Age, Sex, ChestPainType, RestingBP, Cholesterol, FastingBS	Demographics & vitals
+MaxHR, ExerciseAngina, Oldpeak, ST_Slope	Stress-test measures
+Heart Disease	1 = disease present · 0 = no disease
+________________________________________
+3 Phase 1 – Data-Analyst Work:
+CMO Request:
+“Identify who is at highest risk and the factors most associated with heart disease—please compare age, sex, cholesterol and other vitals.”
+
+Key Steps & Deliverables
+1.	Excel cleaning – fixed types, handled blanks, recoded “M/F” → “Male/Female”, “Y/N” → “Yes/No”.
+2.	Age-band feature – <40, 40-60, >60.
+3.	BigQuery (SQL)
+4.	Exploratory visuals (Excel)
+________________________________________
+4 Phase 2 – Business-Intelligence Work
+
+Stakeholder Requests - Stakeholder	Need - BI Features Implemented
+Keith Portone (Operations)	-  Typical vitals for disease vs non-disease	-  Double bar comparing avg RestingBP, Cholesterol, MaxHR, Oldpeak
+Minna Rah (Public Health) -	 Early-warning signals & demographics	-  Bar of average age by sex; Filters for Age-Band, Sex, Cholesterol; Heat-map prototype for further exploration
+Emma Santiago (Executive)	-  High-level snapshot & recommended actions	-  Action-card strip + narrative call-outs
+
+Tableau Dashboard Components
+Component  - 	Description
+Action cards	- Avg Age with Heart Disease 
+- Avg Cholesterol (Heart Disease) 
+- Avg Cholesterol (No Disease)
+Vitals Comparison	Clustered bar chart (disease vs no-disease) – requested by Keith
+Risk by Sex & Age	Bar chart: average age of male vs female patients with disease – requested by Minna
+Interactive Controls	Filters for Age-Band, Sex, Cholesterol range, Chest-Pain type
+Tooltips & Annotations	Plain-language insights on hover; executive recommendations in caption
+
