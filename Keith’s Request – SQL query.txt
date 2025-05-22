@@ -1,0 +1,10 @@
+Keith’s Request – Typical Vital Signs by HeartDisease Status
+
+SELECT
+ HeartDisease,
+  ROUND(AVG(RestingBP), 2) AS Avg_RestingBP,
+  ROUND(AVG(Cholesterol), 2) AS Avg_Cholesterol,
+  ROUND(AVG(MaxHR), 2) AS Avg_MaxHR,
+  ROUND(AVG(Oldpeak), 2) AS Avg_Oldpeak
+FROM `sql-portfolio-projects-456410.Heart_Disease_Dataset.Heart_Disease_Table`
+GROUP BY HeartDisease
